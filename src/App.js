@@ -14,7 +14,6 @@ function App() {
         .then((response) => response.json())
         .then((data) => {
           setImg(data);
-          console.log(data);
         });
     }
     url();
