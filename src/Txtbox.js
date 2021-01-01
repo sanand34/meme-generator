@@ -5,7 +5,7 @@ import { Button, FormControl } from "react-bootstrap";
 function Txtbox() {
   const [pos, setPos] = useState(100);
   const [up, setUp] = useState(-400);
-  const [siz, setSiz] = useState(40);
+  const [siz, setSiz] = useState(50);
   const [value, setValue] = useState("Add text");
   return (
     <div
@@ -24,54 +24,65 @@ function Txtbox() {
           {value}
         </div>
       </div>
-
-      <FormControl
-        type="text"
-        value={value}
-        onChange={(e) => {
-          setValue(e.target.value);
-        }}
-      />
-      <Button
-        variant="dark"
-        onClick={() => {
-          setPos(pos + 20);
-        }}
+      <div
+        style={{ display: "flex", justifyContent: "center", margin: "15px" }}
       >
-        Left
-      </Button>
-      <Button
-        variant="dark"
-        onClick={() => {
-          setPos(pos - 20);
-        }}
-      >
-        Right
-      </Button>
-      <Button
-        variant="dark"
-        onClick={() => {
-          setUp(up - 20);
-        }}
-      >
-        Up
-      </Button>
-      <Button
-        variant="dark"
-        onClick={() => {
-          setUp(up + 20);
-        }}
-      >
-        Down
-      </Button>
-      <Button
-        variant="dark"
-        onClick={() => {
-          setSiz(siz + 5);
-        }}
-      >
-        Text Size
-      </Button>
+        <FormControl
+          type="text"
+          value={value}
+          onChange={(e) => {
+            setValue(e.target.value);
+          }}
+        />
+        <Button
+          variant="dark"
+          onClick={() => {
+            setPos(pos + 20);
+          }}
+        >
+          {`<`}
+        </Button>
+        <Button
+          variant="dark"
+          onClick={() => {
+            setPos(pos - 20);
+          }}
+        >
+          {`>`}
+        </Button>
+        <Button
+          variant="dark"
+          onClick={() => {
+            setUp(up - 20);
+          }}
+        >
+          {`^`}
+        </Button>
+        <Button
+          variant="dark"
+          onClick={() => {
+            setUp(up + 20);
+          }}
+        >
+          {"|"}
+        </Button>
+        <Button
+          variant="dark"
+          onClick={() => {
+            setSiz(siz + 5);
+          }}
+        >
+          +
+        </Button>
+        <Button
+          variant="dark"
+          onClick={() => {
+            setSiz(siz - 5);
+          }}
+        >
+          -
+        </Button>
+      </div>
     </div>
   );
 }
