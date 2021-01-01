@@ -1,4 +1,4 @@
-<video src="Untitled.mov" width="320" height="200" controls preload></video>
+<video src="Untitled.mov" poster="poster.jpg" width="320" height="200" controls preload></video>
 
 
 # Getting Started with Create React App
