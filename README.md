@@ -1,4 +1,5 @@
-![alt text](Untitled.gif)
+<video src="Untitled.mov" width="320" height="200" controls preload></video>
+
 
 # Getting Started with Create React App
 
